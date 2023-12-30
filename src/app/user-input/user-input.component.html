@@ -1,1 +1,20 @@
-<p>user-input works!</p>
+<section>
+    <!-- Button to get the data -->
+    <button (click)="addNewReport()">Add New Report</button>
+</section>
+
+<section>
+    <input type="text" [(ngModel)]="companyName" placeholder="Company Name">
+    <br>
+    <input type="text" [(ngModel)]="yearlyRevenue" placeholder="Yearly Revenue">
+</section>
+
+<section>
+    <br>
+    <!-- to show the data -->
+    <ng-container *ngFor="let item of currentData">
+        {{item.companyName}} : {{item.yearlyRevenue | currency}}
+        <br>
+    </ng-container>
+</section>
+

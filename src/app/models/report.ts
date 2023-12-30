@@ -1,5 +1,5 @@
 // Model report class (keeps the contract for our data coming in)
-export class report {
+export class Report {
 
     // hold our data
     companyName: string;
